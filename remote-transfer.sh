@@ -49,13 +49,13 @@ rsync_options="-az --no-perms --no-owner --no-group"
 while [[ "$#" -gt 0 ]]; do
     case $1 in
         -h|--help) usage ;;
-        -hs|--host-source) host_source="$2"; shift 2 ;;
-        -ps|--port-source) port_source="$2"; shift 2 ;;
-        -s|--source) source="$2"; shift 2 ;;
-        -hd|--host-destination) host_destination="$2"; shift 2 ;;
-        -pd|--port-destination) port_destination="$2"; shift 2 ;;
-        -d|--destination) destination="$2"; shift 2 ;;
-        -e|--exclude) exclude="$2"; shift 2 ;;
+        -hs|--host-source) host_source="$2"; shift ;;
+        -ps|--port-source) port_source="$2"; shift ;;
+        -s|--source) source="$2"; shift ;;
+        -hd|--host-destination) host_destination="$2"; shift ;;
+        -pd|--port-destination) port_destination="$2"; shift ;;
+        -d|--destination) destination="$2"; shift ;;
+        -e|--exclude) exclude="$2"; shift ;;
         -k|--keep-temp) keep_temp=true ;;
         -n|--dry-run) dry_run=true ;;
         --copy-to-temp) copy_to_temp=true; copy_from_temp=false ;;
