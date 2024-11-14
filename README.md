@@ -1,6 +1,6 @@
 # 🔄 File Transfer Script
 
-`transfer.sh` is a Bash script designed to securely transfer files between hosts using `rsync` with SSH. It offers flexible options for copying from a source to a temporary directory, and then from the temporary directory to a destination. The script handles connectivity checks, disk space verification, and supports options for excluding files, dry runs, and keeping temporary files.
+`remote-transfer.sh` is a Bash script designed to securely transfer files between hosts using `rsync` with SSH. It offers flexible options for copying from a source to a temporary directory, and then from the temporary directory to a destination. The script handles connectivity checks, disk space verification, and supports options for excluding files, dry runs, and keeping temporary files.
 
 ## 📋 Prerequisites
 
@@ -14,14 +14,14 @@ Clone the repository or download the script directly:
 
 ```bash
 git clone https://github.com/your-username/transfer-script.git
-cd transfer-script
-chmod +x transfer.sh
+cd rsync-remote-backup
+chmod +x remote-transfer.sh
 ```
 
 ## 💻 Usage
 
 ```bash
-./transfer.sh [OPTIONS]
+./remote-transfer.sh [OPTIONS]
 ```
 
 ### 🔍 Options
@@ -46,7 +46,7 @@ chmod +x transfer.sh
 ### Example 1: Full copy from source to destination
 
 ```bash
-./transfer.sh -hs source-host -s /path/to/source -hd dest-host -d /path/to/destination
+./remote-transfer.sh -hs source-host -s /path/to/source -hd dest-host -d /path/to/destination
 ```
 
 - Copies the source directory to a temporary directory and then transfers it to the destination.
@@ -54,7 +54,7 @@ chmod +x transfer.sh
 ### Example 2: Copy only to the temporary directory
 
 ```bash
-./transfer.sh -hs source-host -s /path/to/source --copy-to-temp -k
+./remote-transfer.sh -hs source-host -s /path/to/source --copy-to-temp -k
 ```
 
 - Copies the source directory to a temporary location and keeps it for inspection.
@@ -62,7 +62,7 @@ chmod +x transfer.sh
 ### Example 3: Copy from the temporary directory to the destination
 
 ```bash
-./transfer.sh -hd dest-host -d /path/to/destination --copy-from-temp
+./remote-transfer.sh -hd dest-host -d /path/to/destination --copy-from-temp
 ```
 
 - Transfers the contents of the temporary directory to the destination.
@@ -93,4 +93,4 @@ Contributions are welcome! Feel free to open an issue or a pull request if you h
 
 ---
 
-🚀 Thank you for using `transfer.sh`! Happy file transferring! 🔄
+🚀 Thank you for using `remote-transfer.sh`! Happy file transferring! 🔄
