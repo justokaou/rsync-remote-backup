@@ -13,7 +13,7 @@ Ensure that you have the following tools installed on your system:
 Clone the repository or download the script directly:
 
 ```bash
-git clone https://github.com/your-username/transfer-script.git
+git clone [https://github.com/justokaou/rsync-remote-backup.git](https://github.com/justokaou/rsync-remote-backup.git)
 cd rsync-remote-backup
 chmod +x remote-transfer.sh
 ```
